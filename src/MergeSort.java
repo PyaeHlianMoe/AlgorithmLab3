@@ -1,6 +1,8 @@
 /* Java program for Merge Sort */
 class MergeSort 
 { 
+	public static int numOfComp = 0;
+	
     // Merges two subarrays of arr[]. 
     // First subarray is arr[l..m] 
     // Second subarray is arr[m+1..r] 
@@ -33,11 +35,13 @@ class MergeSort
             if (L[i] <= R[j]) 
             { 
                 arr[k] = L[i]; 
+                numOfComp++;
                 i++; 
             } 
             else
             { 
-                arr[k] = R[j]; 
+                arr[k] = R[j];
+                numOfComp++;
                 j++; 
             } 
             k++; 

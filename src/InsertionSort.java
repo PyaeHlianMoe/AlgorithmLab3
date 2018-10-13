@@ -1,6 +1,8 @@
 class InsertionSort 
 { 
-    /*Function to sort array using insertion sort*/
+	public static int insNumOfComp = 0;
+	
+	/*Function to sort array using insertion sort*/
     void insertionSort(int arr[]) 
     { 
     	
@@ -16,6 +18,7 @@ class InsertionSort
             while (j>=0 && arr[j] > key) 
             { 
                 arr[j+1] = arr[j]; 
+                insNumOfComp++;
                 j = j-1; 
             } 
             arr[j+1] = key; 

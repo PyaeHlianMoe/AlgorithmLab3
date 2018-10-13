@@ -36,8 +36,10 @@ public class Sorting {
 		       
 		        System.out.println("Insertion Sort: Sorted Array...");
 		        printArray(insArr); 
+		        System.out.println("Number of Comparisons = " + ob.insNumOfComp);
 		        System.out.println("Merge Sort: Sorted Array...");
 		        printArray(mergeArr); 
+		        System.out.println("Number of Comparisons = " + mob.numOfComp);
 		        
 	       };
 
