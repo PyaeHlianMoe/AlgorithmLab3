@@ -3,7 +3,7 @@ class InsertionSort
     /*Function to sort array using insertion sort*/
     void insertionSort(int arr[]) 
     { 
-    	long startTime = System.nanoTime();
+    	
         int n = arr.length; 
         for (int i=1; i<n; ++i) 
         { 
@@ -21,8 +21,7 @@ class InsertionSort
             arr[j+1] = key; 
         } 
         
-        long endTime = System.nanoTime();
-    	System.out.println("Insertion Sort Took "+(endTime - startTime) + " ns"); 
+       
     } 
 
 

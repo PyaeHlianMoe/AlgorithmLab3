@@ -7,36 +7,47 @@ public class Sorting {
 		InsertionSort ob = new InsertionSort();    
         MergeSort mob = new MergeSort();
 
-        	int arr[] =  list(); 
-        
-	        int arr2[] = arr;
+        	
+	        int opt=0;
+	        Scanner sc = new Scanner(System.in);
 	        
 	        
-	  
-	        System.out.println("Original Array...");
-	        printArray(arr); 
 	        
-	        ob.insertionSort(arr); 
-	        
-	        long startTime = System.nanoTime();
-	        mob.mergeSort(arr2,0,arr.length-1); 
-	        long endTime = System.nanoTime();
-	        System.out.println("Merge Sort Took "+(endTime - startTime) + " ns"); 
-	       
-	        System.out.println("Sorted Array...");
-	        printArray(arr); 
-	        printArray(arr2); 
+	        while (opt != 4){
+		        
+	    	    System.out.println("1. for random numbers\n2. for ascending\n3. for descending\n4. Quit\nPlease enter your choice:");
+		        opt = sc.nextInt();
+		        int insArr[] =  list(opt); 
+		        
+		        int mergeArr[] = insArr;
+		        
+		        System.out.println("Original Array...");
+		        printArray(insArr); 
+		        
+		        long insStartTime = System.nanoTime();
+		        ob.insertionSort(insArr); 
+		        long insEndTime = System.nanoTime();
+		    	System.out.println("Insertion Sort Took "+(insEndTime - insStartTime) + " ns"); 
+		        
+		        long merStartTime = System.nanoTime();
+		        mob.mergeSort(mergeArr,0,mergeArr.length-1); 
+		        long merEndTime = System.nanoTime();
+		        System.out.println("Merge Sort Took "+(merEndTime - merStartTime) + " ns"); 
+		       
+		        System.out.println("Sorted Array...");
+		        printArray(insArr); 
+		        printArray(mergeArr); 
+		        
+	       };
 
     } 
 	
 	
-    public static int[] list() {
+    public static int[] list(int opt) {
     	
         int[] anArray = new int[1000];
         
-        Scanner sc = new Scanner(System.in);
-        System.out.println("1. for random numbers\n2. for ascending\n3. for descending\n4. Quit\nPlease enter your choice:");
-        int opt = sc.nextInt();
+        
         
         for(int i=0;i<anArray.length;i++)
         {
