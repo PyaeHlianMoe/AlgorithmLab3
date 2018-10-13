@@ -64,7 +64,6 @@ class MergeSort
     // merge() 
     void mergeSort(int arr[], int l, int r) 
     { 
-    	//long startTime = System.nanoTime();
     	
         if (l < r) 
         { 
@@ -79,11 +78,8 @@ class MergeSort
             merge(arr, l, m, r);           
         	
         } 
-        //long endTime = System.nanoTime();
-        //System.out.println("Merge Sort Took "+(endTime - startTime) + " ns"); 
     } 
   
-    /* A utility function to print array of size n */
-
+    
 
 } 
