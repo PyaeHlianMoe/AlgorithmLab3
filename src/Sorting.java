@@ -34,8 +34,9 @@ public class Sorting {
 		        long merEndTime = System.nanoTime();
 		        System.out.println("Merge Sort Took "+(merEndTime - merStartTime) + " ns"); 
 		       
-		        System.out.println("Sorted Array...");
+		        System.out.println("Insertion Sort: Sorted Array...");
 		        printArray(insArr); 
+		        System.out.println("Merge Sort: Sorted Array...");
 		        printArray(mergeArr); 
 		        
 	       };
