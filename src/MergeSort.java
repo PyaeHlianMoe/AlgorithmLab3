@@ -1,7 +1,7 @@
 /* Java program for Merge Sort */
 class MergeSort 
 { 
-	public static int numOfComp = 0;
+	public long numOfComp = 0;
 	
     // Merges two subarrays of arr[]. 
     // First subarray is arr[l..m] 

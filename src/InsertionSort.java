@@ -1,6 +1,6 @@
 class InsertionSort 
 { 
-	public static int insNumOfComp = 0;
+	public long insNumOfComp = 0;
 	
 	/*Function to sort array using insertion sort*/
     void insertionSort(int arr[]) 

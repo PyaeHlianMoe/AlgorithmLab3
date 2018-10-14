@@ -19,6 +19,10 @@ public class Sorting {
 		        opt = sc.nextInt();
 		        int insArr[] =  list(opt); 
 		        
+		        
+		        ob.insNumOfComp = 0;
+		        mob.numOfComp = 0;
+		        
 		        int mergeArr[] = insArr;
 		        
 		        System.out.println("Original Array...");
@@ -35,10 +39,10 @@ public class Sorting {
 		        System.out.println("Merge Sort Took "+(merEndTime - merStartTime) + " ns"); 
 		       
 		        System.out.println("Insertion Sort: Sorted Array...");
-		        printArray(insArr); 
+		        //printArray(insArr); 
 		        System.out.println("Number of Comparisons = " + ob.insNumOfComp);
 		        System.out.println("Merge Sort: Sorted Array...");
-		        printArray(mergeArr); 
+		        //printArray(mergeArr); 
 		        System.out.println("Number of Comparisons = " + mob.numOfComp);
 		        
 	       };
@@ -48,7 +52,9 @@ public class Sorting {
 	
     public static int[] list(int opt) {
     	
-        int[] anArray = new int[1000];
+    	
+    	int n = 10000;
+        int[] anArray = new int[n];
         
         
         
@@ -56,13 +62,13 @@ public class Sorting {
         {
         	switch(opt) {
 	        	case 1: 
-	        		anArray[i] = (int) (Math.random()*10000); //random
+	        		anArray[i] = (int) (Math.random()*10*n); //random
 	        		break;
 	        	case 2: 
 	        		anArray[i] = i; // ascending
 	        		break;
 	        	case 3:
-	        		anArray[i] = 1000 - i; //descending
+	        		anArray[i] = n - i; //descending
 	        		break;
 	        	default:
 	        		break;
