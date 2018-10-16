@@ -26,7 +26,7 @@ public class Sorting {
 		        int mergeArr[] = insArr;
 		        
 		        System.out.println("Original Array...");
-		        printArray(insArr); 
+		        //printArray(insArr); 
 		        
 		        long insStartTime = System.nanoTime();
 		        ob.insertionSort(insArr); 
@@ -53,7 +53,7 @@ public class Sorting {
     public static int[] list(int opt) {
     	
     	
-    	int n = 10000;
+    	int n = 1000;
         int[] anArray = new int[n];
         
         

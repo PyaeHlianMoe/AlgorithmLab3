@@ -21,6 +21,7 @@ class InsertionSort
                 insNumOfComp++;
                 j = j-1; 
             } 
+            insNumOfComp++;
             arr[j+1] = key; 
         } 
         
